@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_BABIOONDISABLEHEADLOAD</name>
+	<author>Robert Deutz</author>
+	<creationDate>September 2012</creationDate>
+	<copyright>(C) 2012 Robert Deutz Business Solution. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@babioon.com</authorEmail>
+	<authorUrl>www.babioon.com</authorUrl>
+	<version>0.9</version>
+	<description>PLG_SYSTEM_BABIOONDISABLEHEADLOAD_XML_DESCRIPTION</description>	
+
+	<files>
+		<filename plugin="babioondisableheadload">babioondisableheadload.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<languages folder="language">
+		<!--
+			these files will be installed in the administrator/language folder.
+		-->
+		<language tag="en-GB">en-GB/en-GB.plg_system_babioondisableheadload.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_babioondisableheadload.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="disablejs" type="radio"
+					default="1"
+					description="PLG_BABIOONDISABLEHEADLOAD_DISABLEJS_DESC"
+					label="PLG_BABIOONDISABLEHEADLOAD_DISABLEJS_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+	
+				<field name="fnjs" type="textarea"
+					cols="30"
+					description="PLG_BABIOONDISABLEHEADLOAD_FNJS_DESC"
+					label="PLG_BABIOONDISABLEHEADLOAD_FNJS_LABEL"
+					default="mootools-core.js,caption.js"
+					rows="4"
+				/>
+	
+				<field name="disablecss" type="radio"
+					default="0"
+					description="PLG_BABIOONDISABLEHEADLOAD_DISABLECSS_DESC"
+					label="PLG_BABIOONDISABLEHEADLOAD_DISABLECSS_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+	
+				<field name="fncss" type="textarea"
+					cols="30"
+					description="PLG_BABIOONDISABLEHEADLOAD_FNCSS_DESC"
+					label="PLG_BABIOONDISABLEHEADLOAD_FNCSS_LABEL"
+					rows="4"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="buildpackage" default="do">
+
+	<target name="do">
+	
+		<echo msg="********************************************" />
+		<echo msg="* Build-Package: babioon-disableheadload   *" />
+		<echo msg="********************************************" />
+		
+		<property name="filebase" value="${project.basedir}/../../.." override="false"/>
+		<property name="codebase" value="${filebase}/babioon-disableheadload/code" override="true"/>
+		
+		<property name="bp_targetdir" value="${filebase}/build/babioondisableheadload" />
+		
+        <mkdir dir="${filebase}/build" />
+		<mkdir dir="${filebase}/build/${bp_targetdir}" />
+		
+		
+		
+		<copy file="${codebase}/plugins/system/babioondisableheadload/babioondisableheadload.xml" tofile="${bp_targetdir}/babioondisableheadload.xml" overwrite="true"/>
+		<copy file="${codebase}/plugins/system/babioondisableheadload/babioondisableheadload.php" tofile="${bp_targetdir}/babioondisableheadload.php" overwrite="true"/>
+		<copy file="${codebase}/plugins/system/babioondisableheadload/index.html" tofile="${bp_targetdir}/index.html" overwrite="true"/>
+		<copy todir="${bp_targetdir}" overwrite="true">
+			<fileset dir="${codebase}/administrator" >
+				<include name="language/**" />
+			</fileset>
+		</copy>
+
+		<delete file="${filebase}/build/babioon-disableheadload.zip" failonerror="false" />
+		<!-- zipfilename must match to projectname -->
+		<zip destfile="${filebase}/build/babioon-disableheadload.zip" basedir="${bp_targetdir}" />
+	</target>
+</project>

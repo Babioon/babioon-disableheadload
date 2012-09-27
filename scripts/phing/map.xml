@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="map" default="do">
+
+	<!-- import task -->
+	<import file="${project.basedir}/../_4all/tasks.xml"/>
+
+	<target name="do">
+	
+		<echo msg="********************************" />
+		<echo msg="* MAP: babioon-disableheadload *" />
+		<echo msg="********************************" />
+	
+		<phingcall target="linkcomponent">
+			<property name="svnprojectname" value="babioon-disableheadload" />
+			<property name="filebase" value="${packagedir}/${svnprojectname}" />
+			<property name="pname" value="babioondisableheadload" />	
+		</phingcall>
+	</target>
+</project>
