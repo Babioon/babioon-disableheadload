@@ -4,7 +4,7 @@ babioon-disableheadload
 Disable some files that normally would be loaded.
 
 This System plugin lets you disable some of the fiels that would be loaded. 
-Usefull when you don't need mootools-core.js and caption.js.
+If you like to disable mootools.js and caption.js my suggestion is to use this https://github.com/phproberto/plg_sys_mootable
 
 If you still need caption for pictures then take a look at https://github.com/rdeutz/babioon-caption
 
